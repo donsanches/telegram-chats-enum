@@ -1,0 +1,4 @@
+[Telegram]
+api_id = 1234567
+api_hash = 1234567890abcdef1234567890abcdef
+session = your_session_name
