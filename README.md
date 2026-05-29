@@ -8,6 +8,7 @@ Small Python utility which lists all your Telegram chats. It uses Telethon libra
 - Enumerate available chats/dialogs
 - Display chat names and IDs
 - Useful for Telegram automation and bot development
+- Can use MTProto FakeTLS proxy (with ee... secrets)
 
 ## Requirements
 
@@ -73,6 +74,22 @@ Run the script:
 ```bash
 python chatsenum.py
 ```
+
+## Using a proxy
+
+Proxies which use MTProto FakeTLS (with ee... secret) are supported. For that, TelethonFakeTLS library is used.
+
+Add the following section to the `config.ini` file:
+
+```env
+[Proxy]
+; Remove this section entirely if you don't need a proxy
+host = 127.0.0.1
+port = 1080
+secret = your_secret_here
+```
+
+Remove “ee” from the starting of hex secret as described in TelethonFakeTLS docs at https://pypi.org/project/TelethonFakeTLS/
 
 ## Security Notes
 
